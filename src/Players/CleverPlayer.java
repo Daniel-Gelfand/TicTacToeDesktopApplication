@@ -91,7 +91,7 @@ public class CleverPlayer extends WhateverPlayer {
 
         eGameStatus result = boardClass.gameStatus(currentI,currentJ);
 
-        if (result != eGameStatus.IN_PROGRESS) {
+        if (result != eGameStatus.IN_PROGRESS ) {
             return scores.get(result);
         }
 

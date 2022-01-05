@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a529818-17f8-46bc-b482-510013902aab" name="Changes" comment="Change turns fix">
+    <list default="true" id="8a529818-17f8-46bc-b482-510013902aab" name="Changes" comment="update names">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MVVM/View/OptionScreenGameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MVVM/View/OptionScreenGameView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Renderers/ApplicationGuiRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Renderers/ApplicationGuiRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Players/CleverPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Players/CleverPlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -387,7 +387,14 @@
       <option name="presentableId" value="LOCAL‎00031" />
       <updated>1641404715515</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="update names">
+      <created>1641407817695</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1641407817695</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +414,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="adding menu for user" />
-    <MESSAGE value="update names" />
     <MESSAGE value="update all" />
     <MESSAGE value="update clever" />
     <MESSAGE value="update clever!!" />
@@ -431,7 +437,8 @@
     <MESSAGE value="Fonts and Colors" />
     <MESSAGE value="Final version of gui" />
     <MESSAGE value="Change turns fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change turns fix" />
+    <MESSAGE value="update names" />
+    <option name="LAST_COMMIT_MESSAGE" value="update names" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -443,8 +450,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Renderers/ApplicationGuiRenderer.java</url>
-          <line>124</line>
-          <option name="timeStamp" value="10" />
+          <line>254</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
