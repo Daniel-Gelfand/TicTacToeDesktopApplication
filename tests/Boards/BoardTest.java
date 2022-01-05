@@ -12,7 +12,7 @@ class BoardTest {
 
     @org.junit.jupiter.api.BeforeEach
     void setUp() {
-        board = new Board();
+        board = new Board(3);
     }
 
     @org.junit.jupiter.api.AfterEach

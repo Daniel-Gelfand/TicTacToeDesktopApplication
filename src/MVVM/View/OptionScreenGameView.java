@@ -115,7 +115,11 @@ public class OptionScreenGameView extends JFrame {
     }
 
     public void startPlayerVsPlayer() {
-        Game game = new GameGui(new HumanPlayer("X", eMark.X), new HumanPlayer("O", eMark.O), new VoidRenderer());
+        GameGui game = new GameGui(new HumanPlayer("X", eMark.X), new HumanPlayer("O", eMark.O), new VoidRenderer());
+
+        char sizeChar = boardComboBox.getSelectedItem().toString().trim().charAt(0);
+        int size = Integer.parseInt(String.valueOf(sizeChar));
+        game.setBoardSize(size);
         game.run();
 
         startFrame.dispose();

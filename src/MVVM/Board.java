@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 public class Board {
 
-    public static final int SIZE = 3;
-    public static final int WIN_STREAK = 3;
+    public static int SIZE = 5;
+    public static int WIN_STREAK = 4;
     private int emptyPlace;
     private eMark[][] board;
     private eMark lastPlayer;
@@ -24,12 +24,17 @@ public class Board {
      * 'Board' Constructor build Board in size that chosen.
      * Updates the list of empty places and initializes the board
      */
-    public Board() {
+
+
+    public Board(int boardSize) {
+        SIZE = boardSize;
+        WIN_STREAK = SIZE;
         board = new eMark[SIZE][SIZE];
         emptyLocations = new ArrayList<>();
         installBoard();
         emptyPlace = SIZE*SIZE;
         isHaveWinner = false;
+
     }
 
     public eMark[][] getBoard() {

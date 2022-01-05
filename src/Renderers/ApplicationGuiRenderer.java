@@ -1,10 +1,9 @@
 package Renderers;
 
-import MVVM.Board;
 import Enums.eGameStatus;
 import Enums.eMark;
-import Games.Game;
 import Games.GameGui;
+import MVVM.Board;
 import MVVM.ViewModel;
 import Players.HumanPlayer;
 import Players.Player;
@@ -27,6 +26,7 @@ public class ApplicationGuiRenderer extends JFrame implements ActionListener, iR
     private Player playerO;
     private int turnToPlay;
     private Board myBoard;
+    private int boardSize;
 
     /**
      * statistics[0] = X | statistics[1] = O | statistics[2] = Draw
@@ -40,10 +40,11 @@ public class ApplicationGuiRenderer extends JFrame implements ActionListener, iR
 
     }
 
-    public ApplicationGuiRenderer(Player playerX, Player playerO, Board board) {
+    public ApplicationGuiRenderer(Player playerX, Player playerO, Board board, int boardSize) {
         this.playerX = playerX;
         this.playerO = playerO;
         this.myBoard = board;
+        this.boardSize = boardSize;
         turnToPlay = 0;
     }
 
@@ -288,7 +289,8 @@ public class ApplicationGuiRenderer extends JFrame implements ActionListener, iR
         }
 
         frame.dispose();
-        Game game = new GameGui(playerX, playerO, new VoidRenderer());
+        GameGui game = new GameGui(playerX, playerO, new VoidRenderer());
+        game.setBoardSize(boardSize);
         game.run();
 
     }
