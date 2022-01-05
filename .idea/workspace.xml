@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8a529818-17f8-46bc-b482-510013902aab" name="Changes" comment="Change turns fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Games/GameConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Games/GameConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Games/GameGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Games/GameGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MVVM/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MVVM/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MVVM/View/OptionScreenGameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MVVM/View/OptionScreenGameView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Renderers/ApplicationGuiRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Renderers/ApplicationGuiRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Boards/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Boards/BoardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -436,5 +432,21 @@
     <MESSAGE value="Final version of gui" />
     <MESSAGE value="Change turns fix" />
     <option name="LAST_COMMIT_MESSAGE" value="Change turns fix" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/MVVM/ViewModel.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Renderers/ApplicationGuiRenderer.java</url>
+          <line>124</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

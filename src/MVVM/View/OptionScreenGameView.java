@@ -1,18 +1,14 @@
 package MVVM.View;
 
 import Enums.eMark;
-import Games.Game;
 import Games.GameGui;
-import Games.TournamentConsole;
-import Players.CleverPlayer;
 import Players.HumanPlayer;
-import Players.WhateverPlayer;
+import Players.PlayerFactory;
 import Renderers.VoidRenderer;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.io.File;
 import java.io.IOException;
 
@@ -24,15 +20,14 @@ public class OptionScreenGameView extends JFrame {
     private JButton[] participantsSelectionButtons = new JButton[2];
     private JComboBox levelComboBox;
     private JComboBox boardComboBox;
-
     private JPanel buttonPanel = new JPanel();
-    private TournamentConsole tournament;
+
 
     public OptionScreenGameView() {
         setStartFrame();
     }
 
-    public void setStartFrame() {
+    private void setStartFrame() {
 
         startFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         startFrame.setSize(675, 675);
@@ -88,45 +83,35 @@ public class OptionScreenGameView extends JFrame {
         startFrame.setVisible(true);
     }
 
-    public void actionPerformed(ActionEvent e) {
-
-    }
-
-    public void startPlayLevelEasy() {
-        Game game = new GameGui(new HumanPlayer("X", eMark.X), new WhateverPlayer("O", eMark.O), new VoidRenderer());
-        game.run();
-        startFrame.dispose();
-    }
-
-    public void startPlayerVsCPU() {
-
-        if (levelComboBox.getSelectedItem() == "Easy")
-        {
-            Game game = new GameGui(new HumanPlayer("X", eMark.X), new WhateverPlayer("O", eMark.O), new VoidRenderer());
-            game.run();
-            startFrame.dispose();
-        }
-        else
-        {
-            Game game = new GameGui(new HumanPlayer("X", eMark.X), new CleverPlayer("O", eMark.O), new VoidRenderer());
-            game.run();
-            startFrame.dispose();
-        }
-    }
-
-    public void startPlayerVsPlayer() {
-        GameGui game = new GameGui(new HumanPlayer("X", eMark.X), new HumanPlayer("O", eMark.O), new VoidRenderer());
-
+    private int sizeBoard(){
         char sizeChar = boardComboBox.getSelectedItem().toString().trim().charAt(0);
         int size = Integer.parseInt(String.valueOf(sizeChar));
-        game.setBoardSize(size);
-        game.run();
 
+        return size;
+    }
+
+    private void startPlayerVsCPU() {
+        GameGui game;
+
+        if (levelComboBox.getSelectedItem() == "Easy") {
+            game = new GameGui(new PlayerFactory("X", eMark.X).buildPlayer("Human"), new PlayerFactory("O", eMark.O).buildPlayer("Whatever"), new VoidRenderer());
+        }
+        else {
+            game = new GameGui(new PlayerFactory("X", eMark.X).buildPlayer("Human"), new PlayerFactory("O", eMark.O).buildPlayer("TTT.Players.CleverPlayer"), new VoidRenderer());
+        }
+
+        game.setBoardSize(sizeBoard());
+        game.run();
         startFrame.dispose();
     }
 
-    public static void main(String[] args) {
-        OptionScreenGameView viewGame = new OptionScreenGameView();
+    private void startPlayerVsPlayer() {
+        GameGui game = new GameGui(new HumanPlayer("X", eMark.X), new HumanPlayer("O", eMark.O), new VoidRenderer());
+
+        game.setBoardSize(sizeBoard());
+        game.run();
+
+        startFrame.dispose();
     }
 }
 
