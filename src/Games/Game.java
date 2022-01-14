@@ -52,7 +52,7 @@ public abstract class Game {
      * A method that runs the game on each of the boards
      * @return Returns the type of winner
      */
-    abstract public eGameStatus run();
+    abstract public eGameStatus runGame();
 }
 
 

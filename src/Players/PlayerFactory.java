@@ -4,27 +4,19 @@ import Enums.eMark;
 
 public class PlayerFactory {
 
-    private String name;
-    private eMark defaultSign;
+    public static PlayerFactory playerFactory = new PlayerFactory();
 
-    /**
-     * A constructor that receives basic player data.
-     * @param name player name.
-     * @param defaultSign sign(X, O).
-     */
-    public PlayerFactory(String name, eMark defaultSign) {
-        setName(name);
-        setDefaultSign(defaultSign);
-    }
+    private PlayerFactory(){};
+
 
     /**
      * A constructor that gets a player name, and accordingly creates such an object.
-     * @param i_Type class name.
+     * @param type class name.
      * @return Player object.
      */
-    public Player buildPlayer(String i_Type) {
+    public Player buildPlayer(String type, String name, eMark defaultSign) {
 
-        switch(i_Type) {
+        switch(type) {
             case "Human":
                 return new HumanPlayer(name, defaultSign);
             case "Whatever":
@@ -34,14 +26,5 @@ public class PlayerFactory {
             default:
                 return null;
         }
-
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setDefaultSign(eMark defaultSign) {
-        this.defaultSign = defaultSign;
     }
 }

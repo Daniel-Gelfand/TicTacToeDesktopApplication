@@ -26,7 +26,7 @@ public class GameConsole extends Game{
      * @return Returns the type of winner.
      */
     @Override
-    public eGameStatus run() {
+    public eGameStatus runGame() {
         Board board = new Board(3);
         eGameStatus winner = eGameStatus.IN_PROGRESS;
         Player[] myPlayers = new Player[2];
@@ -54,5 +54,4 @@ public class GameConsole extends Game{
 
         return winner;
     }
-
 }

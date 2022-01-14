@@ -5,7 +5,6 @@ import Games.GameGui;
 import Players.HumanPlayer;
 import Players.PlayerFactory;
 import Renderers.VoidRenderer;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -14,6 +13,7 @@ import java.io.IOException;
 
 public class OptionScreenGameView extends JFrame {
 
+    //fields
     private JFrame startFrame = new JFrame("Game options");
     private JPanel playersPanel = new JPanel();
     private JPanel boardSizePanel = new JPanel();
@@ -21,7 +21,6 @@ public class OptionScreenGameView extends JFrame {
     private JComboBox levelComboBox;
     private JComboBox boardComboBox;
     private JPanel buttonPanel = new JPanel();
-
 
     public OptionScreenGameView() {
         setStartFrame();
@@ -83,6 +82,9 @@ public class OptionScreenGameView extends JFrame {
         startFrame.setVisible(true);
     }
 
+    /**
+     *A method that accepts the screen size selection, and performs a transformation.
+     */
     private int sizeBoard(){
         char sizeChar = boardComboBox.getSelectedItem().toString().trim().charAt(0);
         int size = Integer.parseInt(String.valueOf(sizeChar));
@@ -90,30 +92,36 @@ public class OptionScreenGameView extends JFrame {
         return size;
     }
 
+    /**
+     * A method that starts a game against the computer
+     */
     private void startPlayerVsCPU() {
         GameGui game;
 
         if (levelComboBox.getSelectedItem().toString().trim().equals("Easy")) {
-            game = new GameGui(new PlayerFactory("X", eMark.X).buildPlayer("Human"),
-                                new PlayerFactory("O", eMark.O).buildPlayer("Whatever"),
-                                new VoidRenderer());
+            game = new GameGui(PlayerFactory.playerFactory.buildPlayer("Human", "X", eMark.X)
+                    ,PlayerFactory.playerFactory.buildPlayer("Whatever", "O", eMark.O),
+                    new VoidRenderer());
         }
         else {
-            game = new GameGui(new PlayerFactory("X", eMark.X).buildPlayer("Human"),
-                                new PlayerFactory("O", eMark.O).buildPlayer("TTT.Players.CleverPlayer"),
-                                new VoidRenderer());
+            game = new GameGui(PlayerFactory.playerFactory.buildPlayer("Human", "X", eMark.X)
+                    ,PlayerFactory.playerFactory.buildPlayer("TTT.Players.CleverPlayer", "O", eMark.O),
+                    new VoidRenderer());
         }
 
         game.setBoardSize(sizeBoard());
-        game.run();
+        game.runGame();
         startFrame.dispose();
     }
 
+    /**
+     * A method that starts a game against human
+     */
     private void startPlayerVsPlayer() {
         GameGui game = new GameGui(new HumanPlayer("X", eMark.X), new HumanPlayer("O", eMark.O), new VoidRenderer());
 
         game.setBoardSize(sizeBoard());
-        game.run();
+        game.runGame();
 
         startFrame.dispose();
     }

@@ -57,7 +57,7 @@ public class TournamentConsole {
 
             Game game = new GameConsole(players[randomPlayerOne],players[randomPlayerTwo], renderer);
 
-            eGameStatus winner = game.run();
+            eGameStatus winner = game.runGame();
 
             if(winner == eGameStatus.DRAW){
                 results[2]++;
@@ -127,11 +127,10 @@ public class TournamentConsole {
         }
         numberOfRounds = Integer.parseInt(numberOfRoundsStr);
 
+        iRenderer renderer = RendererFactory.rendererFactory.buildRenderer(rendererType);
 
-        iRenderer renderer = new RendererFactory().buildRenderer(rendererType);
-        Player playerX = new PlayerFactory("X", eMark.X).buildPlayer(playerType1);
-        Player playerO = new PlayerFactory("O",eMark.O).buildPlayer(playerType2);
-        TournamentConsole tournament = new TournamentConsole(playerX,playerO,numberOfRounds, renderer);
+        TournamentConsole tournament = new TournamentConsole(PlayerFactory.playerFactory.buildPlayer(playerType1, "X", eMark.X),
+                PlayerFactory.playerFactory.buildPlayer(playerType2, "O", eMark.O),numberOfRounds, renderer);
         result = tournament.playTournament();
 
         System.out.println("TTT.Players.Player X win : " + result[0]);
@@ -155,13 +154,18 @@ public class TournamentConsole {
      * @return true or false.
      */
     public static boolean isDigitsString(String str) {
+        boolean result = false;
 
-        for (char currentChar : str.toCharArray() ) {
-            if (!Character.isDigit(currentChar)) {
-                return false;
-            }
+        if((Character.isDigit(str.charAt(0)) || str.charAt(0) == '-'))
+            result = true;
+
+
+        for(int i = 1 ; i < str.length() ; i++){
+            if(!Character.isDigit(str.charAt(i)))
+                result = false;
         }
-        return true;
+
+        return result;
     }
 
     /**

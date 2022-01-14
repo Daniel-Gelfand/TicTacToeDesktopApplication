@@ -289,7 +289,7 @@ public class ApplicationGuiRenderer extends JFrame implements ActionListener, iR
         frame.dispose();
         GameGui game = new GameGui(playerX, playerO, new VoidRenderer());
         game.setBoardSize(boardSize);
-        game.run();
+        game.runGame();
 
     }
 }

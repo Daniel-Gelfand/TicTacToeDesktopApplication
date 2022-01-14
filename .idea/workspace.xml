@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a529818-17f8-46bc-b482-510013902aab" name="Changes" comment="update names">
+    <list default="true" id="8a529818-17f8-46bc-b482-510013902aab" name="Changes" comment="Add more Tests.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Games/TournamentConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Games/TournamentConsole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MVVM/View/OptionScreenGameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MVVM/View/OptionScreenGameView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Players/CleverPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Players/CleverPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Players/PlayerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Players/PlayerFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,78 +65,84 @@
       <recent name="Games" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FirstScreenGame">
-    <configuration name="FirstScreenGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MVVM.View.FirstScreenGame" />
+  <component name="RunManager" selected="Application.TournamentGUI">
+    <configuration name="TournamentGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MVVM.View.TournamentGUI" />
       <module name="TicTacToe" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OptionScreenGameView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MVVM.View.OptionScreenGameView" />
+    <configuration name="BoardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TicTacToe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="MVVM.View.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TournamentConsole" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Games.TournamentConsole" />
-      <module name="TicTacToe" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Games.GameGui" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BoardTest.setHaveWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TicTacToe" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MVVM.View.*" />
+          <option name="PATTERN" value="Boards.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Boards" />
       <option name="MAIN_CLASS_NAME" value="Boards.BoardTest" />
-      <option name="METHOD_NAME" value="setHaveWinner" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BoardTest.getMark" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TicTacToe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Boards.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Boards" />
+      <option name="MAIN_CLASS_NAME" value="Boards.BoardTest" />
+      <option name="METHOD_NAME" value="getMark" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TournamentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TournamentTest.isDigitsString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TicTacToe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Games.GameGui" />
+          <option name="PATTERN" value="Games.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Games" />
       <option name="MAIN_CLASS_NAME" value="Games.TournamentTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="isDigitsString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TournamentTest.selectionCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TicTacToe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Games.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Games" />
+      <option name="MAIN_CLASS_NAME" value="Games.TournamentTest" />
+      <option name="METHOD_NAME" value="selectionCheck" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FirstScreenGame" />
-        <item itemvalue="Application.OptionScreenGameView" />
-        <item itemvalue="Application.TournamentConsole" />
-        <item itemvalue="JUnit.BoardTest.setHaveWinner" />
-        <item itemvalue="JUnit.TournamentTest" />
+        <item itemvalue="Application.TournamentGUI" />
+        <item itemvalue="JUnit.TournamentTest.isDigitsString" />
+        <item itemvalue="JUnit.TournamentTest.selectionCheck" />
+        <item itemvalue="JUnit.BoardTest.getMark" />
+        <item itemvalue="JUnit.BoardTest" />
       </list>
     </recent_temporary>
   </component>
@@ -179,6 +186,14 @@
       <workItem from="1641368861009" duration="2511000" />
       <workItem from="1641371727251" duration="1900000" />
       <workItem from="1641391081172" duration="1705000" />
+      <workItem from="1641449494827" duration="57000" />
+      <workItem from="1641452329640" duration="299000" />
+      <workItem from="1641453712627" duration="518000" />
+      <workItem from="1641454791707" duration="902000" />
+      <workItem from="1641463338993" duration="198000" />
+      <workItem from="1641743756228" duration="22000" />
+      <workItem from="1641743819048" duration="197000" />
+      <workItem from="1641913400035" duration="397000" />
     </task>
     <task id="LOCAL-00001" summary="Remvoe instanceof">
       <created>1637596356558</created>
@@ -394,7 +409,35 @@
       <option name="project" value="LOCAL" />
       <updated>1641407817695</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="update 4X4 5X5">
+      <created>1641411887606</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1641411887606</updated>
+    </task>
+    <task id="LOCAL-00034" summary="update 4X4 5X5">
+      <created>1641412058811</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1641412058812</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Add comments.">
+      <created>1641454223907</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1641454223907</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Add more Tests.">
+      <created>1641455660531</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1641455660531</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,9 +456,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adding menu for user" />
-    <MESSAGE value="update all" />
-    <MESSAGE value="update clever" />
     <MESSAGE value="update clever!!" />
     <MESSAGE value="Start gui" />
     <MESSAGE value="Update gui" />
@@ -438,16 +478,14 @@
     <MESSAGE value="Final version of gui" />
     <MESSAGE value="Change turns fix" />
     <MESSAGE value="update names" />
-    <option name="LAST_COMMIT_MESSAGE" value="update names" />
+    <MESSAGE value="update 4X4 5X5" />
+    <MESSAGE value="Add comments." />
+    <MESSAGE value="Add more Tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add more Tests." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/MVVM/ViewModel.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Renderers/ApplicationGuiRenderer.java</url>
           <line>254</line>

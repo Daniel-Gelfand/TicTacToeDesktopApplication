@@ -6,16 +6,18 @@ import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 
-public class FirstScreenGame {
-
-
+public class TournamentGUI {
+    //fields.
     private JFrame startFrame = new JFrame("Tic Tac Toe By YDM");
     private JButton startButton = new JButton("Start New Game");
 
-    public FirstScreenGame() {
+    public TournamentGUI() {
         setTheFirstScreen();
     }
 
+    /**
+     * A method that initializes the opening screen.
+     */
     public void setTheFirstScreen() {
         startFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         startFrame.setSize(650, 620);
@@ -41,13 +43,15 @@ public class FirstScreenGame {
         startFrame.setVisible(true);
     }
 
-    public static void main(String[] args) {
-        FirstScreenGame firstScreenGame = new FirstScreenGame();
-    }
-
-    public void startNewGame()
-    {
+    /**
+     * A method that closes the opening screen, and transfers it to the game settings screen.
+     */
+    public void startNewGame() {
         startFrame.dispose();
         OptionScreenGameView viewGame = new OptionScreenGameView();
+    }
+
+    public static void main(String[] args) {
+        TournamentGUI firstScreenGame = new TournamentGUI();
     }
 }

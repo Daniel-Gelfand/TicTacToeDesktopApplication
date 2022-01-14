@@ -10,10 +10,7 @@ import javax.swing.*;
 
 public class GameGui extends Game{
 
-
     private int boardSize;
-
-
 
     /**
      * Initializes the data and transfers it to the base class
@@ -34,7 +31,7 @@ public class GameGui extends Game{
      * @return Returns the type of winner.
      */
     @Override
-    public eGameStatus run() {
+    public eGameStatus runGame() {
         Board model = new Board(boardSize);
         ViewModel vm = new ViewModel();
         ApplicationGuiRenderer view = new ApplicationGuiRenderer(getPlayerX(), getPlayerO(),model, boardSize);

@@ -2,6 +2,9 @@ package Renderers;
 
 
 public class RendererFactory {
+    public static RendererFactory rendererFactory = new RendererFactory();
+
+    private RendererFactory(){};
 
     /**
      * 'buildRenderer' is method that accept the user type of UI.
