@@ -21,7 +21,7 @@
 ## Clone 
 
 ```bash
-  git clone 
+  git clone https://github.com/Daniel-Gelfand/TicTacToeDesktopApplication.git
 ```
 
 ## 2021
