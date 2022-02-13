@@ -4,6 +4,7 @@
 
 
 # Project Title
+Tic-Tac-Toe desktop application in Java. using MinMax Algorithm
 
 
 
@@ -25,6 +26,8 @@ Block: If the opponent has two in a row, the player must play the third themselv
 
 Fork: Cause a scenario where the player has two ways to win (two non-blocked lines of 2).
 
+## MinMax Algorithm
+![alt text](https://www.linkpicture.com/q/Game-tree-for-Tic-Tac-Toe-game-using-MiniMax-algorithm.png)
 
 ## Authors
 
